@@ -12,8 +12,8 @@ easy to use 👍
 
 a lot of tcp ports you can check 👌
 
-# How To Open
+## How To Open
 
-## 1 Download The Python File `check_ports.py`
-## 2 Type in cmd or terminal `python3 check_ports.py` or `py check_ports.py`
-## Enjoy
+# 1 Download The Python File `check_ports.py`
+# 2 Type in cmd or terminal `python3 check_ports.py` or `py check_ports.py`
+# Enjoy
