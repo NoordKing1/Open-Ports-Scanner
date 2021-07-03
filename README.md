@@ -9,7 +9,8 @@ easy to use 👍
 update 1 fixed somebug {
 
   socket library in python deosnt support old tcp ports like `Transmission Control Protocol`
-  add more ports like: `network time` && `POP3`
+  
+  add more ports like: `network time` && `POP3` && `IMAP-SSL`
 
 }
 
@@ -21,6 +22,6 @@ a lot of tcp ports you can check 👌
 
 ## How To Open
 
-.1 Download The Python File `check_ports.py`
-.2 Type in cmd or terminal `python3 check_ports.py` or `py check_ports.py`
-.3 Enjoy
+Download The Python File `check_ports.py`
+Type in cmd or terminal `python3 check_ports.py` or `py check_ports.py`
+Enjoy
