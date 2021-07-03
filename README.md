@@ -19,7 +19,7 @@ update 1 fixed somebug {
 }
 
 
-![image](https://user-images.githubusercontent.com/73787446/124304198-392ed280-db18-11eb-8a0e-747c2a3faa2b.png)
+![image](https://user-images.githubusercontent.com/73787446/124361632-d0f9f280-dbe4-11eb-97e7-a2f850b95810.png)
 
 
 a lot of tcp ports you can check 👌
