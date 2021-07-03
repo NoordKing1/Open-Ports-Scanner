@@ -11,6 +11,10 @@ update 1 fixed somebug {
   socket library in python deosnt support old tcp ports like `Transmission Control Protocol`
   
   add more ports like: `network time` && `POP3` && `IMAP-SSL`
+  
+  fix Specific Port Scanning Problem
+  
+  add some more styles
 
 }
 
