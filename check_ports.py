@@ -11,7 +11,7 @@ LIGHT_CYAN = "\033[1;36m"
 
 print(LIGHT_CYAN + "Advanced Port Scanner By " + RED + "StrikeXD\n")
 
-ports = [80, 20, 21, 23, 25, 443, 88, 161, 162, 3389, 53, 22, 445]
+ports = [80, 20, 21, 23, 25, 443, 88, 3389, 123,110, 53, 22, 445]
 
 
 LIGHT_GREEN = "\033[1;32m"
