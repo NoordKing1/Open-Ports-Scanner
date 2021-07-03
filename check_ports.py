@@ -11,7 +11,7 @@ LIGHT_CYAN = "\033[1;36m"
 
 print(LIGHT_CYAN + "Advanced Port Scanner By " + RED + "StrikeXD\n")
 
-ports = [80, 20, 21, 23, 25, 443, 88, 3389, 123,110, 53, 22, 445]
+ports = [80, 20, 21, 23, 25, 443, 88, 3389, 123,110, 53, 22, 445, 993]
 
 
 LIGHT_GREEN = "\033[1;32m"
@@ -23,23 +23,23 @@ def main2():
     print("\n")
 
     ip_sep = input(LIGHT_GREEN + "[+] " + YELLOW + "Enter The IP: ")
-    scanned_port = input(LIGHT_GREEN + "[+] " + YELLOW + "Enter The Port You Want to scan: ")
-    print("\nPinging " + ip_sep + " at the port " + scanned_port)
+    scanned_port = int(input(LIGHT_GREEN + "[+] " + YELLOW + "Enter The Port You Want to scan: "))
+    print("\nPinging " + ip_sep + " at the port " + str(scanned_port))
     print(LIGHT_CYAN + "\nScan Resualt: \n")
 
     try:
-        for i in ports:
 
-            with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as sock:
+        with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as sock:
+            
+            if sock.connect_ex((ip_sep, scanned_port)) == 0:
+                service = socket.getservbyport(scanned_port)
                 
-                if sock.connect_ex((ip_sep, scanned_port)) == 0:
-                    service = socket.getservbyport(scanned_port)
-                    print(LIGHT_CYAN + "Port " + YELLOW + str(service) + LIGHT_CYAN + " is " + LIGHT_GREEN + "open")
+                print(LIGHT_CYAN + "[+] Port " + LIGHT_GREEN + str(scanned_port) + LIGHT_CYAN + " is " + LIGHT_GREEN + " opened")
 
-                else:
-                    service = socket.getservbyport(i)
-                    print(LIGHT_CYAN + "Port " + YELLOW + str(service) + LIGHT_CYAN + " is " + LIGHT_GREEN + "closed")
-
+            else:
+                print(LIGHT_CYAN + "[+] Port " + LIGHT_GREEN + str(scanned_port) + LIGHT_CYAN + " is " + RED + " closed")
+            print("\n")
+            input("Press Any Key To Exit")
 
     except:
         print(LIGHT_CYAN + "[!] " + RED + "ip or port out of range !")
@@ -66,16 +66,20 @@ def main():
                     
                     if sock.connect_ex((ip, i)) == 0:
                         service = socket.getservbyport(i)
-                        print(LIGHT_CYAN + "Port " + YELLOW + str(service) + LIGHT_CYAN + " is " + LIGHT_GREEN + "open")
+                       
+                        print(LIGHT_CYAN + "Port " + YELLOW + str(service) + LIGHT_CYAN + " is " + LIGHT_GREEN + "open " + YELLOW + "At Port " + LIGHT_GREEN + "" + str(i))
 
                     else:
                         service = socket.getservbyport(i)
-                        print(LIGHT_CYAN + "Port " + YELLOW + str(service) + LIGHT_CYAN + " is " + RED + "closed")
+                        print(LIGHT_CYAN + "Port " + YELLOW + str(service) + LIGHT_CYAN + " is " + RED + "closed " + YELLOW + "At Port " + LIGHT_GREEN + "" + str(i))
 
-                        
+                    print("\n")
+                    input("Press Any Key To Exit")
+                    
 
         except:
             print(LIGHT_CYAN + "[!] " + RED + "ip or port out of range !")
+
     else:
 
         main2()
