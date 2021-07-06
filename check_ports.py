@@ -38,8 +38,7 @@ def main2():
 
             else:
                 print(LIGHT_CYAN + "[+] Port " + LIGHT_GREEN + str(scanned_port) + LIGHT_CYAN + " is " + RED + " closed")
-            print("\n")
-            input("Press Any Key To Exit")
+
 
     except:
         print(LIGHT_CYAN + "[!] " + RED + "ip or port out of range !")
@@ -73,8 +72,6 @@ def main():
                         service = socket.getservbyport(i)
                         print(LIGHT_CYAN + "Port " + YELLOW + str(service) + LIGHT_CYAN + " is " + RED + "closed " + YELLOW + "At Port " + LIGHT_GREEN + "" + str(i))
 
-                    print("\n")
-                    input("Press Any Key To Exit")
                     
 
         except:
@@ -86,3 +83,4 @@ def main():
 
 
 main()
+input()
